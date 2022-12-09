@@ -1,0 +1,18 @@
+git --version
+mkdir test
+cd test
+git init
+create a folder in test folder in Libraries
+git status
+dir
+git add .
+git branch new
+git -b branch1
+git log
+git status
+git add .
+git merge branch1
+
+github.com=create respository
+git remote add origin url
+git push -u origin master
