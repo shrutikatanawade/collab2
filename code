@@ -1,0 +1,50 @@
+public class Cylinder {
+double radius;
+double height;
+Square data = new Square();
+public double getRadius() {
+	return radius;
+}
+public void setRadius(double radius) {
+	this.radius = radius;
+}
+public double getHeight() {
+	return height;
+}
+public void setHeight(double height) {
+	this.height = height;
+}
+public double calculateVolume() {
+	//int value=7;
+	//value++;
+	//value=value-8;
+	
+	return 3.142*this.radius*this.radius*this.height;
+}
+}
+public class CylinderClient {
+
+	public static void main(String[] args) {
+		Cylinder C1 = new Cylinder();
+		C1.setRadius(3.5);
+		C1.setHeight(5);
+		System.out.println(C1.calculateVolume());	
+	}
+}
+
+class CylinderTest {
+	Cylinder C2=new Cylinder();
+	@Test
+	void testGetRadius() {
+		C2.setRadius(6);
+		assertEquals(6,C2.getRadius());
+	}
+
+	@Test
+	void testCalculateVolume() {
+		C2.setRadius(3.5);
+		C2.setHeight(5);
+		assertEquals(192.4475,C2.calculateVolume());
+	}
+
+}
